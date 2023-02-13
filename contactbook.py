@@ -2,7 +2,7 @@ while True:
   q = input('Add (a) \nSearch (s) \nQuit (q): ')
 
   if q == 'a':
-    with open('contact.txt', 'a') as f:
+    with open('PhoneBook-GUI/contact.txt', 'a') as f:
       name = input('Name: ')
       phone = input('Phone: ')
       f.writelines((name, ' : ', phone, '\n'))
