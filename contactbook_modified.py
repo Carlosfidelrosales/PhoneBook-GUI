@@ -33,3 +33,11 @@ def EditCSVFile(contactList):
 
 Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
 Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
+
+#1ST FRAME
+Frame1 = LabelFrame(dataContact,text="")
+Frame1.grid(padx=50,pady=15, row=1, column=1, sticky=N)
+
+#innerframe
+innerFrame_1 = Frame(Frame1)
+innerFrame_1.grid(row=0,column=3,padx=15,pady=0)
