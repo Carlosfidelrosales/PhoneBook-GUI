@@ -74,3 +74,15 @@ Label_Email.grid(row=4,column=0,padx=5,pady=20)
 Email_var = StringVar()
 Email = Entry(innerFrame_1,width=50,textvariable=Email_var, background="yellow")
 Email.grid(row=4,column=1,padx=5,pady=20)
+
+#2ND FRAME
+Frame2 = Frame(dataContact)
+Frame2.grid(row=1,column=3,padx=5,pady=20,sticky=N)
+
+#addbutton
+Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
+Include_DataButton.grid(row=0,column=0,padx=0,pady=3)
+
+#modifybutton
+Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
+Modify_DataButton.grid(row=1,column=0,padx=5,pady=3)
