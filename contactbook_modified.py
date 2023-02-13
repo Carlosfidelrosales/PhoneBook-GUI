@@ -46,3 +46,17 @@ innerFrame_1.grid(row=0,column=3,padx=15,pady=0)
 title_page = Label(innerFrame_1,text="PHONE BOOK", font= Desired_font2)
 title_page.grid(row=0,column=0,columnspan=2,padx=5,pady=5)
 title_page_var = StringVar()
+
+#firstnamelabel
+Label_FirstName = Label(innerFrame_1,text="First Name", font= Desired_font)
+Label_FirstName.grid(row=1,column=0,padx=5,pady=20)
+FirstName_var = StringVar()
+FirstName = Entry(innerFrame_1,width=50, textvariable=FirstName_var, background="yellow")
+FirstName.grid(row=1,column=1,padx=5,pady=20)
+
+#lastnamelabel
+Label_LastName= Label(innerFrame_1,text="Last Name", font= Desired_font)
+Label_LastName.grid(row=2,column=0,padx=5,pady=20)
+LastName_var= StringVar()
+LastName = Entry(innerFrame_1,width=50,textvariable=LastName_var, background="yellow")
+LastName.grid(row=2,column=1,padx=5,pady=20)
