@@ -32,6 +32,12 @@ def EditCSVFile(contactList):
         for row in contactList:
             writecsv.writerow(row)
 
+def ResetData():
+    FirstName_var.set('')
+    LastName_var.set('')
+    ContactNumb_var.set('')
+    Email_var.set('')
+
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
     select.delete(0, END)
