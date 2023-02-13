@@ -107,3 +107,12 @@ FunctionFrame.grid(row=1,column=3,padx=75,pady= 205,sticky=S + N)
 #searchbutton
 Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#6B69D6",fg="#FFFFFF",command="")
 Searchbutton.grid(row=0,column=0,padx=5,pady=3)
+
+#deletebutton
+Delete_button = Button(FunctionFrame,text="Delete",width=20,height=4,bg="#D20000",fg="#FFFFFF",command="")
+Delete_button.grid(row=1,column=0,padx=5,pady=3)
+
+
+InterpetCSVFile()
+
+dataContact.mainloop()
