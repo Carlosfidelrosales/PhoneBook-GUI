@@ -99,3 +99,7 @@ select = Listbox(Data_Display, yscrollcommand=scroll.set,font=("Calibri",10),bg=
 scroll.config(command=select.yview)
 select.grid(row=0,column=1)
 scroll.grid(row=0,column=1)
+
+#Function Frame
+FunctionFrame = Frame(dataContact)
+FunctionFrame.grid(row=1,column=3,padx=75,pady= 205,sticky=S + N)
