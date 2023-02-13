@@ -90,3 +90,9 @@ Modify_DataButton.grid(row=1,column=0,padx=5,pady=3)
 #resetbutton
 Reset_DataButton = Button(Frame2,text="Reset",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
 Reset_DataButton.grid(row=2,column=0,padx=5,pady=3)
+
+#This will display the DETAILS of the contacts.
+Data_Display = Frame(dataContact)
+Data_Display.grid(row=1,column=2,padx=15,pady=10, sticky=N,rowspan=3)
+scroll = Scrollbar(Data_Display, orient=VERTICAL)
+select = Listbox(Data_Display, yscrollcommand=scroll.set,font=("Calibri",10),bg="#000000",fg="#ffffff",width=50,height=19,borderwidth=5,relief="groove")
