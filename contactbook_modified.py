@@ -100,6 +100,10 @@ scroll.config(command=select.yview)
 select.grid(row=0,column=1)
 scroll.grid(row=0,column=1)
 
-#Function Frame
+#FUNCTION FRAME
 FunctionFrame = Frame(dataContact)
 FunctionFrame.grid(row=1,column=3,padx=75,pady= 205,sticky=S + N)
+
+#searchbutton
+Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#6B69D6",fg="#FFFFFF",command="")
+Searchbutton.grid(row=0,column=0,padx=5,pady=3)
