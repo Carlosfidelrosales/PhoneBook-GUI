@@ -103,7 +103,7 @@ Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#6B69D6",f
 Modify_DataButton.grid(row=1,column=0,padx=5,pady=3)
 
 #resetbutton
-Reset_DataButton = Button(Frame2,text="Reset",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
+Reset_DataButton = Button(Frame2,text="Reset",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command = ResetData)
 Reset_DataButton.grid(row=2,column=0,padx=5,pady=3)
 
 #This will display the DETAILS of the contacts.
