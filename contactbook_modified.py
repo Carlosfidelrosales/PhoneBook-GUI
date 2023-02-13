@@ -41,3 +41,8 @@ Frame1.grid(padx=50,pady=15, row=1, column=1, sticky=N)
 #innerframe
 innerFrame_1 = Frame(Frame1)
 innerFrame_1.grid(row=0,column=3,padx=15,pady=0)
+
+#titlesection
+title_page = Label(innerFrame_1,text="PHONE BOOK", font= Desired_font2)
+title_page.grid(row=0,column=0,columnspan=2,padx=5,pady=5)
+title_page_var = StringVar()
