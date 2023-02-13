@@ -31,6 +31,14 @@ def EditCSVFile(contactList):
         for row in contactList:
             writecsv.writerow(row)
 
+def display_Selection():
+    contactList.sort(key=lambda record: record[1])
+    select.delete(0, END)
+    i=0
+    for name, phone, email in contactList:
+        i+=1
+        select.insert(END, f"{i}  |    {name}   |   {phone}  |  {email}")
+
 Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
 Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
 
