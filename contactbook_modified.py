@@ -35,7 +35,14 @@ def EditCSVFile(contactList):
 def IncludeDetail():
     if FirstName.get()!="" and LastName.get()!="" and ContactNumb.get()!="" and Email.get()!="":
         contactList.append([FirstName.get() +' '+ LastName.get(),ContactNumb.get(), Email.get()])
-        
+        print(contactList)
+        EditCSVFile(contactList)
+        display_Selection()
+        ResetData()
+        messagebox.showinfo("SUCCESS", "Contact Added!")
+    else:
+        messagebox.showerror("Error", "Please fill the correct information needed!")
+
 def ResetData():
     FirstName_var.set('')
     LastName_var.set('')
