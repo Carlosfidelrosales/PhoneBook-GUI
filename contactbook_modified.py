@@ -60,3 +60,17 @@ Label_LastName.grid(row=2,column=0,padx=5,pady=20)
 LastName_var= StringVar()
 LastName = Entry(innerFrame_1,width=50,textvariable=LastName_var, background="yellow")
 LastName.grid(row=2,column=1,padx=5,pady=20)
+
+#contactnumlabel
+Label_ContactNumb= Label(innerFrame_1,text="Contact Number", font= Desired_font)
+Label_ContactNumb.grid(row=3,column=0,padx=5,pady=20)
+ContactNumb_var = StringVar()
+ContactNumb = Entry(innerFrame_1,width=50,textvariable=ContactNumb_var, background="yellow")
+ContactNumb.grid(row=3,column=1,padx=5,pady=20)
+
+#emaillabel
+Label_Email= Label(innerFrame_1,text="Email Address", font= Desired_font)
+Label_Email.grid(row=4,column=0,padx=5,pady=20)
+Email_var = StringVar()
+Email = Entry(innerFrame_1,width=50,textvariable=Email_var, background="yellow")
+Email.grid(row=4,column=1,padx=5,pady=20)
