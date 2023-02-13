@@ -30,3 +30,6 @@ def EditCSVFile(contactList):
         writecsv.writerow(header)
         for row in contactList:
             writecsv.writerow(row)
+
+Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
+Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
