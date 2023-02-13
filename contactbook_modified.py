@@ -106,7 +106,7 @@ Frame2 = Frame(dataContact)
 Frame2.grid(row=1,column=3,padx=5,pady=20,sticky=N)
 
 #addbutton
-Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
+Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command=IncludeDetail)
 Include_DataButton.grid(row=0,column=0,padx=0,pady=3)
 
 #modifybutton
