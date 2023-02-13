@@ -21,7 +21,8 @@ def InterpetCSVFile():
         csv_reader = csv.reader(csvfile,delimiter=',')
         header = next(csv_reader)
         for row in csv_reader:
-            contactList.append(row)	
+            contactList.append(row)
+    display_Selection
     print(contactList)
 
 def EditCSVFile(contactList):
