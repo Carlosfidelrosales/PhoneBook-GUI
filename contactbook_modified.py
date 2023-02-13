@@ -32,6 +32,10 @@ def EditCSVFile(contactList):
         for row in contactList:
             writecsv.writerow(row)
 
+def IncludeDetail():
+    if FirstName.get()!="" and LastName.get()!="" and ContactNumb.get()!="" and Email.get()!="":
+        contactList.append([FirstName.get() +' '+ LastName.get(),ContactNumb.get(), Email.get()])
+        
 def ResetData():
     FirstName_var.set('')
     LastName_var.set('')
