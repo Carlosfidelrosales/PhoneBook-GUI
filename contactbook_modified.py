@@ -74,6 +74,10 @@ def RemoveData():
     else:
         messagebox.showerror("Error", 'Please Select the Contact')
 
+def SearchData():
+    name = contactList[SelectedData()]
+    print(name.split(' '))
+
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
     select.delete(0, END)
