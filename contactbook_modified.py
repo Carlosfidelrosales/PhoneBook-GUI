@@ -47,6 +47,7 @@ def ModifyDetail():
     if FirstName.get() and LastName.get() and ContactNumb.get() and Email.get():
         contactList[SelectedData()] = [ FirstName.get()+' '+ LastName.get(), ContactNumb.get(), Email.get()]
         EditCSVFile(contactList)
+        messagebox.showinfo("Confirmation", "Contact Updated Successfully!")
         
 def ResetData():
     FirstName_var.set('')
