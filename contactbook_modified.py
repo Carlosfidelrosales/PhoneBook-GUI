@@ -80,7 +80,7 @@ def SearchData():
     FirstName_var.set(name.split()[0])
     LastName_var.set(name.split()[1])
     ContactNumb_var.set(phone)
-    
+
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
     select.delete(0, END)
@@ -149,7 +149,7 @@ Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#6B69D6",fg=
 Include_DataButton.grid(row=0,column=0,padx=0,pady=3)
 
 #modifybutton
-Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command="")
+Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command=ModifyDetail)
 Modify_DataButton.grid(row=1,column=0,padx=5,pady=3)
 
 #resetbutton
@@ -170,11 +170,11 @@ FunctionFrame = Frame(dataContact)
 FunctionFrame.grid(row=1,column=3,padx=75,pady= 205,sticky=S + N)
 
 #searchbutton
-Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#6B69D6",fg="#FFFFFF",command="")
+Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#6B69D6",fg="#FFFFFF",command=SearchData)
 Searchbutton.grid(row=0,column=0,padx=5,pady=3)
 
 #deletebutton
-Delete_button = Button(FunctionFrame,text="Delete",width=20,height=4,bg="#D20000",fg="#FFFFFF",command="")
+Delete_button = Button(FunctionFrame,text="Delete",width=20,height=4,bg="#D20000",fg="#FFFFFF",command=RemoveData)
 Delete_button.grid(row=1,column=0,padx=5,pady=3)
 
 
