@@ -67,6 +67,10 @@ def ResetData():
 def RemoveData():
     if len(select.curselection())!=0:
         result=messagebox.askyesno('Confirmation','Do You Wish to Permanently Delete Contact?')
+        if result==True:
+            del contactList[SelectedData()]
+            EditCSVFile(contactList)
+            display_Selection()
 
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
