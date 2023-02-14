@@ -39,24 +39,24 @@ def IncludeDetail():
         EditCSVFile(contactList)
         display_Selection()
         ResetData()
-        messagebox.showinfo("SUCCESS", "Contact Added!")
+        messagebox.showinfo("SUCCESS!", "Contact Added!")
     else:
-        messagebox.showerror("Error", "Please fill the correct information needed!")
+        messagebox.showerror("ERROR!", "Please fill the correct information needed!")
 
 def ModifyDetail():
     if FirstName.get() and LastName.get() and ContactNumb.get() and Email.get():
         contactList[SelectedData()] = [ FirstName.get()+' '+ LastName.get(), ContactNumb.get(), Email.get()]
         EditCSVFile(contactList)
-        messagebox.showinfo("Confirmation", "Contact Updated Successfully!")
+        messagebox.showinfo("SUCCESS!", "Contact Updated Successfully!")
         ResetData()
         display_Selection()
     elif not(FirstName.get()) and not(LastName.get()) and not(ContactNumb.get()) and not(Email.get()) and not(len(select.curselection())==0):
-        messagebox.showerror("Error", "Please Fill the Correct Information Needed!")
+        messagebox.showerror("ERROR!", "Please Fill the Correct Information Needed!")
     else:
         if len(select.curselection())==0:
-            messagebox.showerror("Error", "Please Select the Name and Press Search Button")
+            messagebox.showerror("ERROR!", "Please Select the Name and Press Search Button")
         else:
-            messagebox.showerror("Error", "To Load all Information of Selected Row of your Choice, Press Search Button.")
+            messagebox.showerror("ERROR!", "To Load all Information of Selected Row of your Choice, Press Search Button.")
 
 def ResetData():
     FirstName_var.set('')
@@ -66,13 +66,13 @@ def ResetData():
 
 def RemoveData():
     if len(select.curselection())!=0:
-        result=messagebox.askyesno('Confirmation','Do You Wish to Permanently Delete Contact?')
+        result=messagebox.askyesno('CONFIRMATION!','Do You Wish to Permanently Delete Contact?')
         if result==True:
             del contactList[SelectedData()]
             EditCSVFile(contactList)
             display_Selection()
     else:
-        messagebox.showerror("Error", 'Please Select the Contact')
+        messagebox.showerror("ERROR!", 'Please Select the Contact')
 
 def SearchData():
     name, phone = contactList[SelectedData()]
@@ -92,7 +92,7 @@ def display_Selection():
 def SelectedData():
     print("",len(select.curselection()))
     if len(select.curselection())==0:
-        messagebox.showerror("Error", "Please Select the Name you want to find.")
+        messagebox.showerror("ERROR!", "Please Select the Name you want to find.")
     else:
         return int(select.curselection()[0])
 
@@ -108,7 +108,7 @@ innerFrame_1 = Frame(Frame1)
 innerFrame_1.grid(row=0,column=3,padx=15,pady=0)
 
 #titlesection
-title_page = Label(innerFrame_1,text="PHONE BOOK", font= Desired_font2)
+title_page = Label(innerFrame_1,text="PHONEBOOK GUI", font= Desired_font2)
 title_page.grid(row=0,column=0,columnspan=2,padx=5,pady=5)
 title_page_var = StringVar()
 
