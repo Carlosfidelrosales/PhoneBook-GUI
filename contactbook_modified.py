@@ -60,7 +60,7 @@ def display_Selection():
 def SelectedData():
     print("",len(select.curselection()))
     if len(select.curselection())==0:
-        print("Error", "Please Select the Name you want to find.")
+        messagebox.showerror("Error", "Please Select the Name you want to find.")
     else:
         return int(select.curselection()[0])
 
