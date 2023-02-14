@@ -60,7 +60,9 @@ def display_Selection():
 def SelectedData():
     print("",len(select.curselection()))
     if len(select.curselection())==0:
-       
+        print("Error", "Please Select the Name you want to find.")
+    else:
+        return int(select.curselection()[0])
 
 Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
 Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
