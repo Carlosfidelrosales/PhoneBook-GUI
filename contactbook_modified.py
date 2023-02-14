@@ -52,6 +52,11 @@ def ModifyDetail():
         display_Selection()
     elif not(FirstName.get()) and not(LastName.get()) and not(ContactNumb.get()) and not(Email.get()) and not(len(select.curselection())==0):
         messagebox.showerror("Error", "Please Fill the Correct Information Needed!")
+    else:
+        if len(select.curselection())==0:
+            messagebox.showerror("Error", "Please Select the Name and Press Search Button")
+        else:
+            messagebox.showerror("Error", "To Load all Information of Selected Row of your Choice, Press Search Button.")
 
 def ResetData():
     FirstName_var.set('')
