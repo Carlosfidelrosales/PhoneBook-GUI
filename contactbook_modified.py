@@ -71,6 +71,8 @@ def RemoveData():
             del contactList[SelectedData()]
             EditCSVFile(contactList)
             display_Selection()
+    else:
+        messagebox.showerror("Error", 'Please Select the Contact')
 
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
