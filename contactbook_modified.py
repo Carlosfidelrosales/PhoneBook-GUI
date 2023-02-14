@@ -43,6 +43,11 @@ def IncludeDetail():
     else:
         messagebox.showerror("Error", "Please fill the correct information needed!")
 
+def ModifyDetail():
+    if FirstName.get() and LastName.get() and ContactNumb.get() and Email.get():
+        contactList[SelectedData()] = [ FirstName.get()+' '+ LastName.get(), ContactNumb.get(), Email.get()]
+        EditCSVFile(contactList)
+        
 def ResetData():
     FirstName_var.set('')
     LastName_var.set('')
