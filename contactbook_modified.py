@@ -64,6 +64,10 @@ def ResetData():
     ContactNumb_var.set('')
     Email_var.set('')
 
+def RemoveData():
+    if len(select.curselection())!=0:
+        result=messagebox.askyesno('Confirmation','Do You Wish to Permanently Delete Contact?')
+
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
     select.delete(0, END)
