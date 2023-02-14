@@ -17,7 +17,7 @@ contactList = []
 
 def InterpetCSVFile():
     global header
-    with open('StudentData.csv') as csvfile:
+    with open('PhoneBook-GUI/ContactBook.csv') as csvfile:
         csv_reader = csv.reader(csvfile,delimiter=',')
         header = next(csv_reader)
         for row in csv_reader:
@@ -26,7 +26,7 @@ def InterpetCSVFile():
     print(contactList)
 
 def EditCSVFile(contactList):
-    with open('StudentData.csv','w', newline='') as csv_file:
+    with open('PhoneBook-GUI/ContactBook.csv','w', newline='') as csv_file:
         writecsv = csv.writer(csv_file,delimiter=',')
         writecsv.writerow(header)
         for row in contactList:
