@@ -57,6 +57,11 @@ def display_Selection():
         i+=1
         select.insert(END, f"{i}  |    {name}   |   {phone}  |  {email}")
 
+def SelectedData():
+    print("",len(select.curselection()))
+    if len(select.curselection())==0:
+       
+
 Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
 Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
 
