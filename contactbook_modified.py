@@ -4,9 +4,10 @@ from tkinter import messagebox
 import tkinter.font
 
 dataContact = Tk()
-dataContact.title("Contact Book")
+dataContact.title("Contact Book GUI")
 dataContact.geometry("1300x375")
 dataContact.resizable(False, False)
+dataContact.iconbitmap("PhoneBook-GUI/phonebook.ico")
 
 FRAME = Frame(dataContact)
 imageFile = PhotoImage(file = "PhoneBook-GUI/phonebook.png")
