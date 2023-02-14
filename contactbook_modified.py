@@ -75,11 +75,12 @@ def RemoveData():
         messagebox.showerror("ERROR!", 'Please Select the Contact')
 
 def SearchData():
-    name, phone = contactList[SelectedData()]
+    name, phone, email = contactList[SelectedData()]
     print(name.split(' '))
     FirstName_var.set(name.split()[0])
     LastName_var.set(name.split()[1])
     ContactNumb_var.set(phone)
+    Email_var.set(email)
 
 def display_Selection():
     contactList.sort(key=lambda record: record[1])
@@ -87,7 +88,7 @@ def display_Selection():
     i=0
     for name, phone, email in contactList:
         i+=1
-        select.insert(END, f"{i}  |    {name}   |   {phone}  |  {email}")
+        select.insert(END, f"{i} / {name} / {phone} / {email}")
 
 def SelectedData():
     print("",len(select.curselection()))
@@ -97,7 +98,7 @@ def SelectedData():
         return int(select.curselection()[0])
 
 Desired_font = tkinter.font.Font(family="Times New Roman", size=15)
-Desired_font2 = tkinter.font.Font(family="Verdana", size=20, weight="bold")
+Desired_font2 = tkinter.font.Font(family="OCR A Extended", size=30, weight="bold")
 
 #1ST FRAME
 Frame1 = LabelFrame(dataContact,text="")
@@ -116,28 +117,28 @@ title_page_var = StringVar()
 Label_FirstName = Label(innerFrame_1,text="First Name", font= Desired_font)
 Label_FirstName.grid(row=1,column=0,padx=5,pady=20)
 FirstName_var = StringVar()
-FirstName = Entry(innerFrame_1,width=50, textvariable=FirstName_var, background="yellow")
+FirstName = Entry(innerFrame_1,width=50, textvariable=FirstName_var, background="#144272", foreground="#ffffff")
 FirstName.grid(row=1,column=1,padx=5,pady=20)
 
 #lastnamelabel
 Label_LastName= Label(innerFrame_1,text="Last Name", font= Desired_font)
 Label_LastName.grid(row=2,column=0,padx=5,pady=20)
 LastName_var= StringVar()
-LastName = Entry(innerFrame_1,width=50,textvariable=LastName_var, background="yellow")
+LastName = Entry(innerFrame_1,width=50,textvariable=LastName_var, background="#144272", foreground="#ffffff")
 LastName.grid(row=2,column=1,padx=5,pady=20)
 
 #contactnumlabel
 Label_ContactNumb= Label(innerFrame_1,text="Contact Number", font= Desired_font)
 Label_ContactNumb.grid(row=3,column=0,padx=5,pady=20)
 ContactNumb_var = StringVar()
-ContactNumb = Entry(innerFrame_1,width=50,textvariable=ContactNumb_var, background="yellow")
+ContactNumb = Entry(innerFrame_1,width=50,textvariable=ContactNumb_var, background="#144272", foreground="#ffffff")
 ContactNumb.grid(row=3,column=1,padx=5,pady=20)
 
 #emaillabel
 Label_Email= Label(innerFrame_1,text="Email Address", font= Desired_font)
 Label_Email.grid(row=4,column=0,padx=5,pady=20)
 Email_var = StringVar()
-Email = Entry(innerFrame_1,width=50,textvariable=Email_var, background="yellow")
+Email = Entry(innerFrame_1,width=50,textvariable=Email_var, background="#144272", foreground="#ffffff")
 Email.grid(row=4,column=1,padx=5,pady=20)
 
 #2ND FRAME
@@ -145,36 +146,36 @@ Frame2 = Frame(dataContact)
 Frame2.grid(row=1,column=3,padx=5,pady=20,sticky=N)
 
 #addbutton
-Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command=IncludeDetail)
+Include_DataButton = Button(Frame2,text="Add",width=20,height=3,bg="#F94A29",fg="#FFFFFF",command=IncludeDetail)
 Include_DataButton.grid(row=0,column=0,padx=0,pady=3)
 
 #modifybutton
-Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command=ModifyDetail)
+Modify_DataButton = Button(Frame2,text="Update",width=20,height=3,bg="#F94A29",fg="#FFFFFF",command=ModifyDetail)
 Modify_DataButton.grid(row=1,column=0,padx=5,pady=3)
 
 #resetbutton
-Reset_DataButton = Button(Frame2,text="Reset",width=20,height=3,bg="#6B69D6",fg="#FFFFFF",command = ResetData)
+Reset_DataButton = Button(Frame2,text="Reset",width=20,height=3,bg="#F94A29",fg="#FFFFFF",command = ResetData)
 Reset_DataButton.grid(row=2,column=0,padx=5,pady=3)
 
 #This will display the DETAILS of the contacts.
 Data_Display = Frame(dataContact)
 Data_Display.grid(row=1,column=2,padx=15,pady=10, sticky=N,rowspan=3)
-scroll = Scrollbar(Data_Display, orient=VERTICAL)
-select = Listbox(Data_Display, yscrollcommand=scroll.set,font=("Calibri",10),bg="#000000",fg="#ffffff",width=50,height=19,borderwidth=5,relief="groove")
-scroll.config(command=select.yview)
+# scroll = Scrollbar(Data_Display, orient=VERTICAL)
+select = Listbox(Data_Display,font=("Cascadia Code",10),bg="#000000",fg="#FFBF00",width=50,height=19,borderwidth=5,relief="groove")
+# scroll.config(command=select.yview)
 select.grid(row=0,column=1)
-scroll.grid(row=0,column=1)
+# scroll.grid(row=0,column=1)
 
 #FUNCTION FRAME
 FunctionFrame = Frame(dataContact)
 FunctionFrame.grid(row=1,column=3,padx=75,pady= 205,sticky=S + N)
 
 #searchbutton
-Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#6B69D6",fg="#FFFFFF",command=SearchData)
+Searchbutton = Button(FunctionFrame,text="Search",width=20, height = 4, bg="#F94A29",fg="#FFFFFF",command=SearchData)
 Searchbutton.grid(row=0,column=0,padx=5,pady=3)
 
 #deletebutton
-Delete_button = Button(FunctionFrame,text="Delete",width=20,height=4,bg="#D20000",fg="#FFFFFF",command=RemoveData)
+Delete_button = Button(FunctionFrame,text="Delete",width=20,height=4,bg="#820000",fg="#FFFFFF",command=RemoveData)
 Delete_button.grid(row=1,column=0,padx=5,pady=3)
 
 
