@@ -50,6 +50,8 @@ def ModifyDetail():
         messagebox.showinfo("Confirmation", "Contact Updated Successfully!")
         ResetData()
         display_Selection()
+    elif not(FirstName.get()) and not(LastName.get()) and not(ContactNumb.get()) and not(Email.get()) and not(len(select.curselection())==0):
+        messagebox.showerror("Error", "Please Fill the Correct Information Needed!")
 
 def ResetData():
     FirstName_var.set('')
