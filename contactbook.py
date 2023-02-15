@@ -8,7 +8,7 @@ while True:
       f.writelines((name, ' : ', phone, '\n'))
   
   elif q == 's':
-    with open('contact.txt', 'r') as f:
+    with open('PhoneBook-GUI/contact.txt', 'r') as f:
       search = input('Search: ')
       for i in f:
         if search in i:
